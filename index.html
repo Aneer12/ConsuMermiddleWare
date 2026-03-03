@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Product Manager</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main>
+      <h1>Product Manager</h1>
+
+      <section class="panel">
+        <h2>Add Product</h2>
+        <form id="product-form">
+          <label>
+            Product name
+            <input id="name" name="name" type="text" required />
+          </label>
+
+          <label>
+            Category
+            <select id="category" name="category" required>
+              <option value="men">Men</option>
+              <option value="women">Women</option>
+            </select>
+          </label>
+
+          <label>
+            Product image (from your computer)
+            <input id="image" name="image" type="file" accept="image/*" required />
+          </label>
+
+          <button type="submit">Add Product</button>
+        </form>
+      </section>
+
+      <section class="panel">
+        <h2>Products</h2>
+        <label>
+          Show category
+          <select id="filter-category">
+            <option value="all">All</option>
+            <option value="men">Men</option>
+            <option value="women">Women</option>
+          </select>
+        </label>
+        <div id="products" class="products"></div>
+      </section>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>
